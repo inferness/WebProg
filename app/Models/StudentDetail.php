@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class student extends Model
+class StudentDetail extends Model
 {
     use HasFactory;
 
-    protected $table = 'student';
+    protected $table = 'student_detail';
 
-    public function studentDetail(){
-        return $this->hasOne(StudentDetail::class);
+    public function student(){
+        return $this->belongsTo(Student::class);
     }
 }
