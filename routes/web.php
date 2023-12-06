@@ -17,3 +17,7 @@ use App\Http\Controllers\StudentController;
 Route::get('/', [StudentController::class, 'getAll']);
 
 Route::get('/studentDetail', [StudentController::class, 'getStudentDetail']);
+
+Route::get('/login', [StudentController::class, 'localization']);
+
+Route::get('/collection', [StudentController::class, 'collection']);
