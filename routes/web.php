@@ -23,3 +23,13 @@ Route::get('/form', function(){
 });
 
 Route::post('/formProcess',[StudentController::class, 'processForm']);
+
+Route::get('/form', function(){
+    return view('form');
+});
+
+Route::post('/formProcess',[StudentController::class, 'processForm']);
+
+Route::get('/login', [StudentController::class, 'localization']);
+
+Route::get('/collection', [StudentController::class, 'collection']);
