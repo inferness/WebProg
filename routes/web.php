@@ -17,3 +17,9 @@ use App\Http\Controllers\StudentController;
 Route::get('/', [StudentController::class, 'getAll']);
 
 Route::get('/studentDetail', [StudentController::class, 'getStudentDetail']);
+
+Route::get('/form', function(){
+    return view('form');
+});
+
+Route::post('/formProcess',[StudentController::class, 'processForm']);
