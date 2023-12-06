@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\SessionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,12 +25,12 @@ Route::get('/form', function(){
 
 Route::post('/formProcess',[StudentController::class, 'processForm']);
 
-Route::get('/form', function(){
-    return view('form');
-});
-
-Route::post('/formProcess',[StudentController::class, 'processForm']);
-
 Route::get('/login', [StudentController::class, 'localization']);
 
 Route::get('/collection', [StudentController::class, 'collection']);
+
+Route::get('/home', [SessionController::class, 'home']);
+Route::get('/create', [SessionController::class, 'create']);
+Route::get('/access', [SessionController::class, 'access']);
+Route::get('/delete', [SessionController::class, 'delete']);
+Route::get('/flash', [SessionController::class, 'flash']);
